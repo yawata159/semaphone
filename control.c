@@ -23,7 +23,7 @@ int main(int argc, char *argv[]){
         su.val = 1;
 
         sc = semctl(semid, 0, SETVAL, su);
-        printf("value set: %d\n", sc);
+        printf("value set: %d\n", su.val);
     }
     else if (strncmp(argv[1], "-v", strlen(argv[1])) == 0){
         semid = semget(key, 1, 0);
